@@ -1,4 +1,5 @@
 import { $fetch } from "ohmyfetch";
+// import { util } from "prettier";
 import { withQuery } from "ufo";
 import { useLanguages } from "./";
 
@@ -42,14 +43,17 @@ async function getPage(id, { revalidate = false, query = {} } = {}) {
   const isCached = hasPage(id, query);
   const targetUrl = getApiUrl(withQuery(`${id}.json`, query));
 
-  // Use cached page if present in the store, except when revalidating
-  if (!revalidate && isCached) {
-    if (import.meta.env.DEV) {
-      console.log(`[getPage] Pulling ${id} page data from cache.`);
-    }
+  // // Use cached page if present in the store, except when revalidating
+  // if (!revalidate && isCached) {
+  //   if (import.meta.env.DEV) {
+  //     console.log(`[getPage] Pulling ${id} page data from cache.`);
+  //   }
 
-    return cache.get(id);
-  }
+  //   return cache.get(id);
+  // }
+  console.log(
+    "————————————————————————————————————————————————————————————————————————————————————————— APADEMIDE: REACTIVER CACHE QUAND DEV OK"
+  );
 
   // Otherwise retrieve page data for the first time
   if (import.meta.env.DEV) {

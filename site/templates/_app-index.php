@@ -20,7 +20,7 @@
   <meta name="theme-color" content="#41b883">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="<?= $site->title()->escape() ?>">
+  <meta name="apple-mobile-web-app-title" content="<?= $site->title() ?>">
 
   <link rel="manifest" href="/manifest.json">
   <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">

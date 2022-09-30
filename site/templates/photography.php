@@ -15,7 +15,16 @@ $data = [
         'alt' => $image->alt()->value()
       ] : null
     ])
-    ->values()
+    ->values(),
+  'translations' => 
+    array_map(
+      fn ($translation) => 
+        [
+          'name' => t('switch', Str::upper($translation['code']), $translation['code']),
+          'url' => '/' . $translation['code'] . '/' . $page->uri($translation['code'])
+          // ()
+        ],  
+      $page->translations()->toArray())
 ];
 
 echo \Kirby\Data\Json::encode($data);

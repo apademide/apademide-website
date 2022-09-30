@@ -1,0 +1,9 @@
+Title: Error
+
+----
+
+Intro: Pas introuvable.
+
+----
+
+Text: Oh non y'a plus rien qui va :( Va plutôt voir la page d'accueil !!!!! : (link: /fr/about text: Lien vers la page d'accueil)
