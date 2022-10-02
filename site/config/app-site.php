@@ -23,9 +23,20 @@ return [
 
     // (3)
     // You can add custom commonly used data, as done for this starterkit:
-    'title' => site()->title()->value(),
-    'social' => page('about')
+    'title' => $sTitle = site()->title()->value(),
+    'copyright' => [
+        'name' => site()->copyright()->value() ?: $sTitle,
+        'year' => '2020–' . date('Y'),
+    ],
+    'slogan' => $slogan = site()->slogan()->value() ?: 'Créations visuelles pluridisciplinaires',
+    'description' => site()->description()->value() ?: $slogan,
+    'adress' => [
+        'road' => site()->adressRoad()->value(),
+        'number' => site()->adressNumber()->value(),
+        'location' => site()->adressLocation()->value(),
+    ],
+    'social' => site()
         ->social()
         ->toStructure()
-        ->toArray()
+        ->toArray(),
 ];

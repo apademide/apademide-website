@@ -16,15 +16,20 @@ $data = [
       ] : null
     ])
     ->values(),
-  'translations' => 
-    array_map(
-      fn ($translation) => 
-        [
-          'name' => t('switch', Str::upper($translation['code']), $translation['code']),
-          'url' => '/' . $translation['code'] . '/' . $page->uri($translation['code'])
-          // ()
-        ],  
-      $page->translations()->toArray())
+  // 'translations' => $site
+  //   ->translations()
+  //   ->map(fn ($translation) => [
+  //     'url' => $page->urlForLanguage($translation->code()),
+  //     'name' => t('switch', $kirby->language($translation->code())->name(), $translation->code()),
+  //     // 'name' => t('switch', Str::upper($translation['code']), $translation['code']),
+  //   ])->values()
+  //   // array_map(
+  //   //   fn ($translation) => 
+  //   //     [
+  //   //       'name' => t('switch', Str::upper($translation['code']), $translation['code']),
+  //   //       'url' => '/' . $translation['code'] . '/' . $page->uri($translation['code'])
+  //   //     ],  
+  //   //   $page->translations()->toArray())
 ];
 
 echo \Kirby\Data\Json::encode($data);

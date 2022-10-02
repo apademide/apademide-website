@@ -15,6 +15,7 @@ $data = [
     'url' => $image->crop(800, 1000)->url(),
     'alt' => $image->alt()->value()
   ])->values()
+  
 ];
 
 echo \Kirby\Data\Json::encode($data);

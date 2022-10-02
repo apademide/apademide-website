@@ -1,5 +1,70 @@
-Title: Magaaaaadine
+Title: APADEMIDE
 
 ----
 
-Description: FacilitaoSimple, almost identical port of the Kirby 3 starterkit frontend to Vue.js. Head over to https://github.com/johannschopplich/kirby-vue3-starterkit for more details about the project.
+Slogan: 
+
+----
+
+Copyright: Aurian 'APADEMIDE' Aubert
+
+----
+
+Description: Créations visuelles pluridisciplinaires // Suisse // Graphisme / Web / Identité graphique / Affiche / DA / Communication / Marketing / Stratégie / …
+
+----
+
+Email: contact@apademide.ch
+
+----
+
+Tel: +41 79 430 14 10
+
+----
+
+Adressroad: Chemin de la Rupille
+
+----
+
+Adressnumber: 18
+
+----
+
+Adresslocation: CH–1273 Arzier
+
+----
+
+Social:
+
+- 
+  name: Instagram
+  nickname: @apademide
+  url: https://instagram.com/apademide
+- 
+  name: GitHub
+  nickname: apademide
+  url: https://github.com/apademide/
+- 
+  name: LinkedIn
+  nickname: Aurian Aubert
+  url: https://www.linkedin.com/in/apademide/
+
+----
+
+Assetsfontdefault: - arzier_works_22-10-01_02vf.ttf
+
+----
+
+Assetsfontemphasis: 
+
+----
+
+Pages: 
+
+----
+
+Adress: Chemin de la Rupille 18
+
+----
+
+Descriptions: 

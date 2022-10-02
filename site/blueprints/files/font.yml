@@ -1,0 +1,8 @@
+title: Fonte du site
+
+accept:
+  extension:
+    - woff2
+    - woff
+    - ttf
+    - otf

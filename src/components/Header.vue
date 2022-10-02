@@ -15,6 +15,7 @@
       >
         {{ page.title }}
       </router-link>
+      <language-switcher>foo</language-switcher>
     </nav>
   </header>
 </template>
@@ -22,9 +23,16 @@
 <script setup>
 import { useRoute } from "vue-router";
 import { useSite } from "~/composables";
+import LanguageSwitcher from "./LanguageSwitcher.vue";
 
 const site = useSite();
 const route = useRoute();
+
+console.log(
+  "%cDesigned & developed by Aurian Aubert%cwww.apademide.ch",
+  "font-size:12px;font-weight:bold;color:#000;background-color:#fff;padding:2px 10px 1px 10px;border-radius:2px;",
+  "font-size:12px;color:#fff;background-color:#000;font-weight:bold;padding:3px 10px 2px 10px;border-radius:2px;margin-left:10px"
+);
 </script>
 
 <style scoped>
@@ -34,7 +42,7 @@ const route = useRoute();
 
 .header a {
   position: relative;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 0.875rem;
   letter-spacing: 0.05em;
   padding: 0.5rem 0;

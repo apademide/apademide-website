@@ -3,7 +3,7 @@
 /** @var \Kirby\Cms\Page $page */
 ?>
 <!DOCTYPE html>
-<html lang="<?= $kirby->languageCode() ?? 'en' ?>">
+<html lang="<?= $kirby->languageCode() ?? 'fr' ?>">
 <head>
 
   <meta charset="utf-8">
@@ -31,6 +31,25 @@
 
   <?= vueKit()->js() ?>
   <?= vueKit()->css() ?>
+
+  <style>
+    @font-face {
+      font-family: "A1273D";
+      src: url(<?= $site->assetsFontDefault()->toFile()->url() ?? '' ?>);
+    }
+    <?php if( $font = $site->assetsFontEmphasis()->toFile() ?? false ): ?>
+    @font-face {
+      font-family: "A1273E";
+      src: url(<?= $font->url() ?>);
+    }
+    <?php endif ?>
+    :root {
+      --F-D: "A1273D", "Alpaga VAR", "Alpaga", Menlo, Helvetica, monospace;
+      --F-E: "A1273E", "Atacama VAR", "Atacama", "Times New Roman", Times, serif;
+      font-family: var(--F-D);
+      /* font-family: "A1273D", fantasy; */
+    }
+  </style>
 
 </head>
 <body>

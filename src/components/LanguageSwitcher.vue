@@ -10,10 +10,12 @@
 
 <script setup>
 import { useRoute } from "vue-router";
-import { useLanguages, useSite } from "~/composables";
+// import { useLanguages, useSite } from "~/composables";
+import { useSite } from "~/composables";
 
 const site = useSite();
 const route = useRoute();
-const { languageCode: currentCode } = useLanguages();
-const languages = site.languages.filter(({ code }) => code !== currentCode);
+// const { languageCode: currentCode } = useLanguages();
+// const languages = site.languages.filter(({ code }) => code !== currentCode);
+const languages = site.languages;
 </script>

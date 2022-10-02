@@ -1,34 +1,167 @@
-# The site blueprint must have a title, the title may be different from the file name
-# The `site.yml` blueprint defines the look of the start page (Dashboard) of the Panel.
+# # The site blueprint must have a title, the title may be different from the file name
+# # The `site.yml` blueprint defines the look of the start page (Dashboard) of the Panel.
+# title: Site
+
+# # The site blueprint usually provides easy access to all main pages of the site.
+# # In this example blueprint, we also show subpages of the `photography` and `notes` pages.
+# # More about the site blueprint: https://getkirby.com/docs/reference/panel/blueprints/site
+# options:
+#   preview: false
+#   changeTitle: false
+
+# # The layout of this form has two columns:
+# columns:
+#   # The first column has one section for the subpages of the `photography` page in card layout
+#   # It reuses the pages section defined in `/site/blueprints/sections/albums.yml`
+#   - width: 1/2
+#     sections:
+#       albums: sections/albums
+
+#   # The second column has two sections, `notes` and `pages`
+#   - width: 1/2
+#     sections:
+#       # The `notes` section reuses the pages section defined in `/site/blueprints/sections/notes.yml`
+#       notes: sections/notes
+
+#       # The `pages` pages section shows other main pages of the site
+#       # Using the `templates` option, we limit which types of pages are shown
+#       # Using the `create` option, we limit the type of page that can be created when a new page is created
+#       # Note that the `sandbox` page and the `error` page that also exist in the content folder but use different blueprints thus do not show up in the list
+#       # Since the error page's blueprint is set to `read: false`, it wouldn't show up here even if you added the error blueprint to the templates list
+#       pages:
+#         type: pages
+#         create: default
+#         templates:
+#           - about
+#           - home
+#           - default
+
 title: Site
 
-# The site blueprint usually provides easy access to all main pages of the site.
-# In this example blueprint, we also show subpages of the `photography` and `notes` pages.
-# More about the site blueprint: https://getkirby.com/docs/reference/panel/blueprints/site
+icon: 🏗️
 
-# The layout of this form has two columns:
-columns:
-  # The first column has one section for the subpages of the `photography` page in card layout
-  # It reuses the pages section defined in `/site/blueprints/sections/albums.yml`
-  - width: 1/2
+tabs:
+  clients:
+    label: Clients (ADMIN)
     sections:
-      albums: sections/albums
-
-  # The second column has two sections, `notes` and `pages`
-  - width: 1/2
-    sections:
-      # The `notes` section reuses the pages section defined in `/site/blueprints/sections/notes.yml`
-      notes: sections/notes
-
-      # The `pages` pages section shows other main pages of the site
-      # Using the `templates` option, we limit which types of pages are shown
-      # Using the `create` option, we limit the type of page that can be created when a new page is created
-      # Note that the `sandbox` page and the `error` page that also exist in the content folder but use different blueprints thus do not show up in the list
-      # Since the error page's blueprint is set to `read: false`, it wouldn't show up here even if you added the error blueprint to the templates list
-      pages:
+      drafts:
+        label: Clients
         type: pages
-        create: default
         templates:
-          - about
-          - home
-          - default
+          - clients
+        status: all
+
+  #       columns array  –  Columns config for layout: table
+  # create    –  Optional array of templates that should only be allowed to add or false to completely disable page creation
+  # empty    –  Sets the text for the empty state box
+  # flip  bool  false  Enables/disables reverse sorting
+  # headline    –  The headline for the section. This can be a simple string or a template with additional info from the parent page.
+  # help    –  Sets the help text
+  # image    –  Image options to control the source and look of preview
+  # info    –  Optional info text setup. Info text is shown on the right (lists, cardlets) or below (cards) the title.
+  # label    –  The label for the section. This can be a simple string or a template with additional info from the parent page.
+  # layout  string  list  Section layout.
+  # limit  int  20  Sets the number of items per page. If there are more items the pagination navigation will be shown at the bottom of the section.
+  # max  int  –  Sets the maximum number of allowed entries in the section
+  # min  int  –  Sets the minimum number of required entries in the section
+  # page  int  –  Sets the default page for the pagination. This will overwrite default pagination.
+  # parent  string  –  Sets the query to a parent to find items for the list
+  # search  bool  false  Enable/disable the search in the sections
+  # size  string  auto  The size option controls the size of cards. By default cards are auto-sized and the cards grid will always fill the full width. With a size you can disable auto-sizing. Available sizes: tiny, small, medium, large, huge
+  # sortBy  string  –  Overwrites manual sorting and sorts by the given field and sorting direction (i.e. date desc)
+  # sortable  bool  true  Enables/disables manual sorting
+  # status  string    Filters pages by their status. Available status settings: draft, unlisted, listed, published, all.
+  # templates    –  Filters the list by templates and sets template options when adding new pages to the section.
+  # text    {{ model.title }}  Setup for the main text in the list or cards. By default this will display the title.
+
+  data:
+    label: Data (PUBLIC)
+    fields:
+      slogan:
+        type: text
+        label: Slogan
+        placeholder: Créations visuelles pluridisciplinaires
+        width: 1/2
+      copyright:
+        type: text
+        label: Copyright
+        placeholder: "{{ site.title }}"
+        before: Copyright © 2022
+        width: 1/2
+      description:
+        type: textarea
+        label: Description
+        buttons: false
+        placeholder: Créations visuelles pluridisciplinaires
+        help: SEO | Idéalement entre 150 et 300 chars
+      email:
+        type: email
+        label: Mail
+        width: 1/2
+      tel:
+        type: tel
+        label: Téléphone
+        width: 1/2
+      adressRoad:
+        type: text
+        label: Rue
+        size: small
+        width: 2/6
+        buttons: false
+      adressNumber:
+        type: text
+        label: Numéro
+        size: small
+        width: 1/6
+        buttons: false
+      adressLocation:
+        type: text
+        label: NPA/Localité
+        size: small
+        width: 1/2
+        buttons: false
+      social:
+        type: structure
+        label: Réseaux sociaux
+        width: 1/2
+        columns:
+          name:
+            width: 3/1
+          nickname:
+            width: 4/1
+          url:
+            width: 7/1
+        fields:
+          name:
+            type: text
+            label: Réseau
+            width: 1/2
+          nickname:
+            type: text
+            label: Pseudo
+            width: 1/2
+          url:
+            type: url
+            label: URL
+
+  assets:
+    label: Assets (PUBLIC)
+    fields:
+      assetsFontDefault:
+        type: files
+        label: Fonte principale
+        required: true
+        uploads: font
+        multiple: false
+        width: 1/2
+      assetsFontEmphasis:
+        type: files
+        label: Fonte secondaire
+        uploads: font
+        multiple: false
+        width: 1/2
+
+  projets:
+    label: Projects (PUBLIC)
+    fields:
+      pages: true

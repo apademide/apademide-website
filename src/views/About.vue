@@ -42,6 +42,7 @@
 
 <script setup>
 import { usePage } from "~/composables";
+import Intro from "../components/Intro.vue";
 
 const page = usePage();
 </script>
