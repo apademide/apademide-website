@@ -2,7 +2,7 @@ Title: APADEMIDE
 
 ----
 
-Slogan: 
+Slogan: Créations visuelles pluridisciplinaires
 
 ----
 
@@ -51,15 +51,54 @@ Social:
 
 ----
 
+Assetscolors:
+
+- 
+  name: BG-main
+  color: '#bbbbbb'
+- 
+  name: F-main
+  color: '#000000'
+
+----
+
 Assetsfontdefault: - arzier_works_22-10-01_02vf.ttf
 
 ----
 
-Assetsfontemphasis: 
+Assetsfontdefaultfallback: "Alpaga VAR", "Alpaga", Menlo, Helvetica, monospace
+
+----
+
+Assetsfontdefaultfeaturesettings: "ss02"
+
+----
+
+Assetsfontdefaultvariationsettings: "wght" 500
+
+----
+
+Assetsfontemphasis: - arzier_works_22-09-28_06vf.ttf
+
+----
+
+Assetsfontemphasisfallback: 
+
+----
+
+Assetsfontemphasisfeaturesettings: 
+
+----
+
+Assetsfontemphasisvariationsettings: 
 
 ----
 
 Pages: 
+
+----
+
+Assetsfontdefaultfeaturessettings: 
 
 ----
 

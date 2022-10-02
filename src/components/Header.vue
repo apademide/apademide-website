@@ -1,4 +1,5 @@
 <template>
+  <h1>Copyright © {{ site.copyright.year }} {{ site.copyright.name }}</h1>
   <header class="header">
     <router-link to="/" class="logo">
       {{ site.title }}

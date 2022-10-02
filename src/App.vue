@@ -1,5 +1,4 @@
 <template>
-  <SkipToContentLink />
   <Announcer />
 
   <div class="page">
