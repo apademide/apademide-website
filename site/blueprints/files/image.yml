@@ -1,6 +1,17 @@
 # Each file blueprint must have a title, the title may be different from the file name
 title: Image
 
+accept:
+  extension:
+    - jpg
+    - jpeg
+    - png
+    - gif
+  mime:
+    - image/jpeg
+    - image/png
+    - image/gif
+  type: image
 # Like page blueprints, file blueprints can define a layout with tabs, columns, sections and fields
 # File blueprints define what sort of information should get stored in a file's meta data file
 # In addition to the fields defined in this example blueprint, you can also set what type of file is acceptable

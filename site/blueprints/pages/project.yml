@@ -1,0 +1,21 @@
+title: Projet
+
+icon: 📖
+
+columns:
+  - width: 1/2
+    sections:
+      fields:
+        fields:
+          cover:
+            type: files
+            label: Couverture
+            translate: false
+            multiple: false
+            display: cards
+            uploads:
+              template: image
+  - width: 1/2
+    fields:
+      blocks: true
+# More about pages sections: https://getkirby.com/docs/reference/panel/sections/pages

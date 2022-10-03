@@ -34,12 +34,16 @@ Adresslocation: CH–1273 Arzier
 
 ----
 
+Fullname: Aurian Aubert
+
+----
+
 Social:
 
 - 
   name: Instagram
   nickname: @apademide
-  url: https://instagram.com/apademide
+  url: https://instagram.com/apademide/
 - 
   name: GitHub
   nickname: apademide
@@ -74,7 +78,7 @@ Assetsfontdefaultfeaturesettings: "ss02"
 
 ----
 
-Assetsfontdefaultvariationsettings: "wght" 500
+Assetsfontdefaultvariationsettings: "wght" 400
 
 ----
 
@@ -91,6 +95,19 @@ Assetsfontemphasisfeaturesettings:
 ----
 
 Assetsfontemphasisvariationsettings: 
+
+----
+
+Projectspersonnal:
+
+- project/himalaya-and-back
+- project/chasing-waterfalls
+- project/clients
+- project/exploring-the-universe
+
+----
+
+Projectsclients: - project/through-the-desert
 
 ----
 

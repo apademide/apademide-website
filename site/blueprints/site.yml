@@ -82,6 +82,11 @@ tabs:
         size: small
         width: 1/2
         buttons: false
+      fullname:
+        type: text
+        label: Nom complet
+        width: 1/2
+        placeholder: Aurian Aubert
       social:
         type: structure
         label: Réseaux sociaux
@@ -105,120 +110,187 @@ tabs:
           url:
             type: url
             label: URL
-
   assets:
     label: Assets (PUBLIC)
-    fields:
-      # Couleurs
-      assetsColorsHeadline:
-        type: headline
-        label: Couleurs
-        numbered: false
-      assetsColors:
-        type: structure
-        label: Couleurs
-        width: 1/2
-        columns:
-          name:
-            width: 2/6
-            before: --C-
-          color:
-            width: 4/6
+    sections:
+      sectionAssets1:
+        type: fields
         fields:
-          name:
-            type: text
-            label: Nom
-            before: --C-
-            pattern: '[A-Za-z\-]+'
-            help: Lettres et traits d'union uniquement
+          # Couleurs
+          assetsColorsHeadline:
+            type: headline
+            label: Couleurs
+            numbered: false
+          assetsColors:
+            type: structure
+            label: Couleurs
+            width: 1/2
+            columns:
+              name:
+                width: 2/6
+                before: "--C-"
+              color:
+                width: 4/6
+            fields:
+              name:
+                type: text
+                label: Nom
+                before: --C-
+                pattern: '[A-Za-z\-]+'
+                help: Lettres et traits d'union uniquement
+                required: true
+              color:
+                type: colors
+                label: Couleur
+                alpha: true
+                default: "#000000"
+                required: true
+          # Font default
+          assetsFontDefaultHeadline:
+            type: headline
+            label: Fonte principale
+            numbered: false
+          assetsFontDefault:
+            type: files
+            label: Fichier
             required: true
-          color:
-            type: colors
-            label: Couleur
-            alpha: true
-            default: "#000000"
-            required: true
-      # Font default
-      assetsFontDefaultHeadline:
-        type: headline
-        label: Fonte principale
-        numbered: false
-      assetsFontDefault:
+            uploads: font
+            max: 3
+            width: 1/2
+            translate: false
+          assetsFontDefaultFallback:
+            type: textarea
+            label: Fallback
+            font: monospace
+            buttons: false
+            width: 1/2
+            help: '`"Atacama VAR", Helvetica, monospace`'
+            spellcheck: false
+            translate: false
+          assetsFontDefaultFeatureSettings:
+            type: textarea
+            label: font-feature-settings
+            font: monospace
+            buttons: false
+            width: 1/2
+            help: '`"ss02", "ss03", …`'
+            spellcheck: false
+            translate: false
+          assetsFontDefaultVariationSettings:
+            type: textarea
+            label: font-variation-settings
+            font: monospace
+            buttons: false
+            width: 1/2
+            help: '`"wght" 450, "wdth" 100, …`'
+            spellcheck: false
+            translate: false
+          # Font emphasis
+          assetsFontEmphasisHeadline:
+            type: headline
+            label: Fonte secondaire
+            numbered: false
+            translate: false
+          assetsFontEmphasis:
+            type: files
+            label: Fichier
+            uploads: font
+            multiple: false
+            width: 1/2
+            translate: false
+          assetsFontEmphasisFallback:
+            type: textarea
+            label: Fallback
+            font: monospace
+            buttons: false
+            width: 1/2
+            help: '`"Atacama VAR", Helvetica, monospace`'
+            spellcheck: false
+            translate: false
+          assetsFontEmphasisFeatureSettings:
+            type: textarea
+            label: font-feature-settings
+            font: monospace
+            buttons: false
+            width: 1/2
+            help: '`"ss02", "ss03", …`'
+            spellcheck: false
+            translate: false
+          assetsFontEmphasisVariationSettings:
+            type: textarea
+            label: font-variation-settings
+            font: monospace
+            buttons: false
+            width: 1/2
+            help: '`"wght" 450, "wdth" 100, …`'
+            spellcheck: false
+            translate: false
+      sectionAssets2:
         type: files
-        label: Fichier
-        required: true
-        uploads: font
-        max: 3
-        width: 1/2
-        translate: false
-      assetsFontDefaultFallback:
-        type: textarea
-        label: Fallback
-        font: monospace
-        buttons: false
-        width: 1/2
-        help: '`"Atacama VAR", Helvetica, monospace`'
-        spellcheck: false
-        translate: false
-      assetsFontDefaultFeatureSettings:
-        type: textarea
-        label: font-feature-settings
-        font: monospace
-        buttons: false
-        width: 1/2
-        help: '`"ss02", "ss03", …`'
-        spellcheck: false
-        translate: false
-      assetsFontDefaultVariationSettings:
-        type: textarea
-        label: font-variation-settings
-        font: monospace
-        buttons: false
-        width: 1/2
-        help: '`"wght" 450, "wdth" 100, …`'
-        spellcheck: false
-        translate: false
-      # Font emphasis
-      assetsFontEmphasisHeadline:
-        type: headline
-        label: Fonte secondaire
-        numbered: false
-        translate: false
-      assetsFontEmphasis:
-        type: files
-        label: Fichier
-        uploads: font
-        multiple: false
-        width: 1/2
-        translate: false
-      assetsFontEmphasisFallback:
-        type: textarea
-        label: Fallback
-        font: monospace
-        buttons: false
-        width: 1/2
-        help: '`"Atacama VAR", Helvetica, monospace`'
-        spellcheck: false
-        translate: false
-      assetsFontEmphasisFeatureSettings:
-        type: textarea
-        label: font-feature-settings
-        font: monospace
-        buttons: false
-        width: 1/2
-        help: '`"ss02", "ss03", …`'
-        spellcheck: false
-        translate: false
-      assetsFontEmphasisVariationSettings:
-        type: textarea
-        label: font-variation-settings
-        font: monospace
-        buttons: false
-        width: 1/2
-        help: '`"wght" 450, "wdth" 100, …`'
-        spellcheck: false
-        translate: false
+        label: Fichiers uploadés
+
   projets:
     label: Projects (PUBLIC)
-    fields:
-      pages: true
+    sections:
+      sectionProjects1:
+        type: pages
+        label: Ouvrir la page de projets
+        create: false
+        parent: site
+        template: projects
+        layout: cards
+        size: medium
+        # parent: site.find('projects')
+        # type: fields
+        # fields:
+        #   projectsPersonnalHealdine:
+        #     type: headline
+        #     label: Projects personnels
+        #     numbered: false
+        #   projectsPersonnal:
+        #     extends: sections/pages
+        #     label: Sélection des projets personnels visibles
+        # type: pages
+        # label: Sélection des projets personnels visibles
+        # layout: cards
+        # image:
+        #   cover: true
+
+        # query: "site.find('project')"
+        # create:
+        #   - project
+
+        # translate: false
+        # subpage: false
+        # projectsClientsHealdine:
+        #   type: headline
+        #   label: Projects clients
+        #   numbered: false
+        # projectsClients:
+        #   extends: sections/pages
+        #   label: Sélection des projets clients visibles
+        # type: pages
+        # label: Sélection des projets clients visibles
+        # layout: cards
+        # image:
+        #   cover: true
+
+        # query: "site.find('project')"
+        # create:
+        #   - project
+
+        # translate: false
+        # subpage: false
+      #     projectsAllHeadline:
+      #       type: headline
+      #       label: Tous les projets
+      #       numbered: false
+      # sectionProjects2:
+      #   type: pages
+      #   label: Tous les projets, pour en créer des nouveaux et les gérer
+      #   layout: cards
+      #   parent: site.find('project')
+      #   image:
+      #     cover: true
+      #   create:
+      #     - project

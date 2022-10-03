@@ -33,7 +33,7 @@
   <?= vueKit()->css() ?>
 
   <style>
-/* Generated CSS rules c/o APADEMIDE */
+  /* Generated CSS rules c/o APADEMIDE */
 <?php 
   $fontUrlFromCollection = function($files) {
     $result = '';
@@ -46,54 +46,53 @@
     return $result;
   };
 ?>
-@font-face {
-  font-family: "A1273D";
-  src:<?= $fontUrlFromCollection($site->assetsFontDefault()->toFiles()) ?>;
-}
+  @font-face {
+    font-family: "A1273D";
+    src:<?= $fontUrlFromCollection($site->assetsFontDefault()->toFiles()) ?>;
+  }
 <?php
   // There may not be an emphasis font, so we prevent creating an empty @font-face
   $fontEmphasisUrls = $fontUrlFromCollection($site->assetsFontEmphasis()->toFiles());
   if($hasEmphasis = ($fontEmphasisUrls !== '')):
 ?>
-@font-face {
-  font-family: "A1273E";
-  src: <?= $fontEmphasisUrls ?>;
-}
+  @font-face {
+    font-family: "A1273E";
+    src: <?= $fontEmphasisUrls ?>;
+  }
 <?php endif ?>
-:root {
-  --F-D: "A1273D", <?= $site->assetsFontDefaultFallback()->or("sans-serif") ?>;
-  --F-D-feature-settings: <?= $site->assetsFontDefaultFeatureSettings()->or("unset") ?>;
-  --F-D-variation-settings: <?= $site->assetsFontDefaultVariationSettings()->or("unset") ?>;
+  :root {
+    --F-D: "A1273D", <?= $site->assetsFontDefaultFallback()->or("sans-serif") ?>;
+    --F-D-feature-settings: <?= $site->assetsFontDefaultFeatureSettings()->or("unset") ?>;
+    --F-D-variation-settings: <?= $site->assetsFontDefaultVariationSettings()->or("unset") ?>;
 <?php
   // Set emphasis font settings depending on its state 
   if($hasEmphasis):
 ?>
-  --F-E: "A1273E", <?= $site->assetsFontEmphasisFallback()->or("sans-serif") ?>;
-  --F-E-feature-settings: <?= $site->assetsFontEmphasisFeatureSettings()->or("unset") ?>;
-  --F-E-variation-settings: <?= $site->assetsFontEmphasisVariationSettings()->or("unset") ?>;
+    --F-E: "A1273E", <?= $site->assetsFontEmphasisFallback()->or("sans-serif") ?>;
+    --F-E-feature-settings: <?= $site->assetsFontEmphasisFeatureSettings()->or("unset") ?>;
+    --F-E-variation-settings: <?= $site->assetsFontEmphasisVariationSettings()->or("unset") ?>;
 <?php endif ?>
 <?php
   // Generates all color variables
   foreach($site->assetsColors()->yaml() as $color):
 ?>
-  <?= '--C-'.$color['name'].': '.$color['color'].';'.PHP_EOL ?>
+  <?= '  --C-'.$color['name'].': '.$color['color'].';'.PHP_EOL ?>
 <?php endforeach ?>
-}
-html {
-  font-family: var(--F-D);
-  font-feature-settings: var(--F-D-feature-settings);
-  font-variation-settings: var(--F-D-variation-settings);
-}
+  }
+  html {
+    font-family: var(--F-D);
+    font-feature-settings: var(--F-D-feature-settings);
+    font-variation-settings: var(--F-D-variation-settings);
+  }
 <?php
-  if($hasEmphasis):
+if($hasEmphasis):
 ?>
-em {
-  font-family: var(--F-E);
-  font-feature-settings: var(--F-E-feature-settings);
-  font-variation-settings: var(--F-E-variation-settings);
-}
+  em {
+    font-family: var(--F-E);
+    font-feature-settings: var(--F-E-feature-settings);
+    font-variation-settings: var(--F-E-variation-settings);
+  }
 <?php endif ?>
-
   </style>
 
 </head>

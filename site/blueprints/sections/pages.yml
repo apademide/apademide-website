@@ -1,0 +1,18 @@
+# This section blueprint defines a pages section that can be reused across multiple blueprints
+# or multiple times within the same blueprint, see `/site/blueprints/pages/notes.yml` and `/site/blueprints/site.yml`
+# Sections can have different layouts and display additional information or a preview image
+# More about pages sections: https://getkirby.com/docs/reference/panel/sections/pages
+type: pages
+label: Liste de projets
+layout: cards
+image:
+  cover: true
+
+parent: "kirby.page('project')"
+query: "kirby.page('project')"
+template: project
+create:
+  - project
+
+translate: false
+subpage: false
