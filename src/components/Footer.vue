@@ -48,8 +48,3 @@ const site = useSite();
   color: #fff;
 }
 </style>
-<style>
-* {
-  background-color: #bbbbbb;
-}
-</style>

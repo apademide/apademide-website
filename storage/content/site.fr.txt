@@ -6,63 +6,43 @@ Slogan: Créations visuelles pluridisciplinaires
 
 ----
 
-Copyright: Aurian 'APADEMIDE' Aubert
+Copyright: 
 
 ----
 
-Description: Créations visuelles pluridisciplinaires // Suisse // Graphisme / Web / Identité graphique / Affiche / DA / Communication / Marketing / Stratégie / …
+Description: 
 
 ----
 
-Email: contact@apademide.ch
+Email: 
 
 ----
 
-Tel: +41 79 430 14 10
+Tel: 
 
 ----
 
-Adressroad: Chemin de la Rupille
+Adressroad: 
 
 ----
 
-Adressnumber: 18
+Adressnumber: 
 
 ----
 
-Adresslocation: CH–1273 Arzier
+Adresslocation: 
 
 ----
 
-Fullname: Aurian Aubert
+Fullname: 
 
 ----
 
-Social:
-
-- 
-  name: Instagram
-  nickname: @apademide
-  url: https://instagram.com/apademide/
-- 
-  name: GitHub
-  nickname: apademide
-  url: https://github.com/apademide/
-- 
-  name: LinkedIn
-  nickname: Aurian Aubert
-  url: https://www.linkedin.com/in/apademide/
+Social: 
 
 ----
 
-Assetscolors:
-
-- 
-  name: BG-main
-  color: '#bbbbbb'
-- 
-  name: F-main
-  color: '#000000'
+Assetscolors: 
 
 ----
 
@@ -70,19 +50,19 @@ Assetsfontdefault: - arzier_works_22-10-01_02vf.ttf
 
 ----
 
-Assetsfontdefaultfallback: "Alpaga VAR", "Alpaga", Menlo, Helvetica, monospace
+Assetsfontdefaultfallback: 
 
 ----
 
-Assetsfontdefaultfeaturesettings: "ss02"
+Assetsfontdefaultfeaturesettings: 
 
 ----
 
-Assetsfontdefaultvariationsettings: "wght" 400
+Assetsfontdefaultvariationsettings: 
 
 ----
 
-Assetsfontemphasis: - arzier_works_22-09-28_06vf.ttf
+Assetsfontemphasis: 
 
 ----
 
@@ -95,32 +75,3 @@ Assetsfontemphasisfeaturesettings:
 ----
 
 Assetsfontemphasisvariationsettings: 
-
-----
-
-Projectspersonnal:
-
-- project/himalaya-and-back
-- project/chasing-waterfalls
-- project/clients
-- project/exploring-the-universe
-
-----
-
-Projectsclients: - project/through-the-desert
-
-----
-
-Pages: 
-
-----
-
-Assetsfontdefaultfeaturessettings: 
-
-----
-
-Adress: Chemin de la Rupille 18
-
-----
-
-Descriptions: 

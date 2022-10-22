@@ -2,7 +2,7 @@ Title: Error
 
 ----
 
-Intro: Pas introuvable.
+Intro: Page introuvable.
 
 ----
 

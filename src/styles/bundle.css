@@ -20,7 +20,8 @@ a {
 }
 
 :root {
-  --content-width: 100%;
+  background-color: var(--C-BG-main);
+  color: var(--C-T-main);
 }
 
 /*# sourceMappingURL=bundle.css.map */

@@ -46,6 +46,15 @@ return [
                 ];
             }
         ]
-    ]
+    ],
+    'hooks' => [
+        'file.create:after' => function ($file) {
+            $count = $file->siblings()->count();
+            $filename = "A-" . date("YmdHis") . "-" . str_pad($count, 3, "0", STR_PAD_LEFT);
 
+            try {
+                $file->changeName($filename);
+            } catch(Exception $e) {}
+        }
+    ]
 ];

@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 h1,
 h2,
 h3,
@@ -15,5 +16,10 @@ p,
 a {
   font-size: unset;
   font-weight: unset;
+  color: var(--C-T-main);
+}
+
+:root {
+  background-color: var(--C-BG-main);
   color: var(--C-T-main);
 }
