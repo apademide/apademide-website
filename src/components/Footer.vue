@@ -1,14 +1,6 @@
 <template>
   <footer class="footer">
-    <router-link to="/">
-      &copy; {{ new Date().getFullYear() }} / {{ site.title }}
-    </router-link>
-
-    <nav class="social">
-      <a v-for="social in site.social" :key="social.url" :href="social.url">
-        {{ social.platform }}
-      </a>
-    </nav>
+    
   </footer>
 </template>
 

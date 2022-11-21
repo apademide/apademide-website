@@ -1,33 +1,26 @@
 <template>
-  <h1>Copyright © {{ site.copyright.year }} {{ site.copyright.name }}</h1>
-  <header class="header">
-    <router-link to="/" class="logo">
-      {{ site.title }}
-    </router-link>
-
-    <nav id="menu" class="menu">
-      <router-link
-        v-for="page in site.children.filter((page) => page.isListed)"
-        :key="page.uri"
-        :to="`/${page.uri}`"
-        :class="{
-          open: route.path.startsWith(`/${page.uri}`),
-        }"
-      >
-        {{ page.title }}
-      </router-link>
-      <language-switcher>foo</language-switcher>
-    </nav>
+  <header id="header">
+    <div class="left">
+      <a href="/">AuAu Studio</a>
+    </div>
+    <div class="right">
+      <a href="/">Work</a>
+      <a href="/">About</a>
+      <a href="/">Contact</a>
+      <a href="/">FR/EN</a>
+    </div>
   </header>
 </template>
 
 <script setup>
-import { useRoute } from "vue-router";
-import { useSite } from "~/composables";
-import LanguageSwitcher from "./LanguageSwitcher.vue";
+// import { useRoute } from "vue-router";
+// import { useSite } from "~/composables";
+// import { usePage } from "~/composables";
+// import LanguageSwitcher from "./LanguageSwitcher.vue";
 
-const site = useSite();
-const route = useRoute();
+// const page = usePage();
+// const site = useSite();
+// const route = useRoute();
 
 console.log(
   "%cDesigned & developed by Aurian Aubert%cwww.apademide.ch",
@@ -36,51 +29,31 @@ console.log(
 );
 </script>
 
-<style scoped>
-.header {
-  margin-bottom: 1.5rem;
-}
+<style scoped lang="scss">
+  #header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 
-.header a {
-  position: relative;
-  /* text-transform: uppercase; */
-  font-size: 0.875rem;
-  letter-spacing: 0.05em;
-  padding: 0.5rem 0;
-  font-weight: 700;
-}
+    width: 100%;
+    position: fixed;
+    padding: var(--L-MARGIN-SMALL) 0;
+    z-index: 10000;
 
-.header .logo {
-  display: block;
-  margin-bottom: 1.5rem;
-  padding: 0.5rem 0;
-}
+    color: #eeeeee;
+    mix-blend-mode: difference;
+    border-bottom: 1px solid #eeeeee;
 
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.menu a {
-  margin: 0 0.75rem;
-}
+    div {
+      display: flex;
+      justify-content: space-between;
 
-.menu a[aria-current="page"],
-.menu a.open {
-  border-bottom: 2px solid #000;
-}
+      padding: 0 var(--L-MARGIN-SMALL);
 
-@media screen and (min-width: 40rem) {
-  .header .logo {
-    margin-bottom: 0;
+      a {
+        display: inline-block;
+      }
+    }
+
   }
-  .header {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .menu {
-    margin-right: -0.75rem;
-  }
-}
 </style>

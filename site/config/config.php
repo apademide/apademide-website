@@ -49,12 +49,20 @@ return [
     ],
     'hooks' => [
         'file.create:after' => function ($file) {
-            $count = $file->siblings()->count();
-            $filename = "A-" . date("YmdHis") . "-" . str_pad($count, 3, "0", STR_PAD_LEFT);
+            if (
+                !in_array(
+                    $file->extension(),
+                    array('ttf', 'otf', 'woff', 'woff2')
+                )
+            ) {
+                $count = $file->siblings()->count() + 1;
+                $filename = "A-" . date("ymdHis") . "-" . str_pad($count, 3, "0", STR_PAD_LEFT);
 
-            try {
-                $file->changeName($filename);
-            } catch(Exception $e) {}
+                try {
+                    $file->changeName($filename);
+                } catch(Exception $e) {}
+            }
+
         }
     ]
 ];
